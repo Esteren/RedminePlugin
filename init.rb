@@ -17,4 +17,16 @@ Redmine::Plugin.register :esteren do
     }
   )
 
+  menu(
+    :top_menu,
+    :esteren,
+    {:controller => :time_entries, :action => :index},
+    :caption => :label_time_tracking,
+    :if => Proc.new {
+      User.current.allowed_to?(:view_time_entries, nil, :global => true) or
+      User.current.admin?
+    }
+  )
+
+# User.current.allowed_to?(:
 end

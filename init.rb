@@ -28,5 +28,4 @@ Redmine::Plugin.register :esteren do
     }
   )
 
-# User.current.allowed_to?(:
 end

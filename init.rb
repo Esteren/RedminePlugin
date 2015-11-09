@@ -8,7 +8,7 @@ Redmine::Plugin.register :esteren do
 
   menu(
     :top_menu,
-    :esteren,
+    :esteren_issues,
     {:controller => :issues, :action => :index},
     :caption => :label_issue_plural,
     :if => Proc.new {
@@ -19,7 +19,7 @@ Redmine::Plugin.register :esteren do
 
   menu(
     :top_menu,
-    :esteren,
+    :esteren_time_entries,
     {:controller => :time_entries, :action => :index},
     :caption => :label_time_tracking,
     :if => Proc.new {
